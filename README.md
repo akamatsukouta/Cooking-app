@@ -32,7 +32,7 @@ Things you may want to cover:
 | email    | string | null: false, unique: true |
 | encrypted_password | string | null: false |
 | sex_id   | integer| null: false |
-| cooking_experience | integer | null: false |
+| cooking_experience_id | integer | null: false |
 
 ### Association
 
