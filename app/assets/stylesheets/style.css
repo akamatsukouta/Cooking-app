@@ -1,0 +1,83 @@
+.header {
+  background-color: #f7fef1;
+  margin-bottom: 48px;
+  padding: 20px 0;
+  margin: 0 auto; 
+
+}
+.upper_side {
+  width: 1030px;
+  margin: 0 auto;
+  
+}
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 100px;
+}
+.nav-right {
+  
+}
+.lists-right{
+ margin: 35px 0px;
+}
+
+.search-form{
+  display: flex;
+  margin: 35px auto;
+  
+}
+
+.search-input{
+ width: 300px;
+ 
+}
+
+.search-btn{
+  cursor: pointer;
+  background-color: #3ccace;
+  justify-content: flex-start;
+}
+/* 全体のスタイル */
+.swiper-wrapper {
+  width: 100%;
+  height: 200px;
+
+}
+
+
+/* 全スライド共通スタイル */
+.swiper-slide {
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 250px;
+  padding: 235px 0px;
+}
+/* 4の倍数＋1枚目のスライドのスタイル（1枚目、5枚目…） */
+.swiper-slide:nth-child(4n+1) {
+  padding: 20px 0px;
+  
+}
+/* 4の倍数＋2枚目のスライドのスタイル（2枚目、6枚目…） */
+.swiper-slide:nth-child(4n+2) {
+  padding: 20px 0px;
+  
+  
+}
+/* 4の倍数＋3枚目のスライドのスタイル（3枚目、7枚目…） */
+.swiper-slide:nth-child(4n+3) {
+  padding: 20px 0px;
+  
+}
+/* 4の倍数＋4枚目のスライドのスタイル（4枚目、8枚目…） */
+.swiper-slide:nth-child(4n+4) {
+  padding: 20px 0px;
+ 
+}
+
+
