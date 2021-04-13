@@ -3,24 +3,30 @@
   margin-bottom: 48px;
   padding: 20px 0;
   margin: 0 auto; 
-
+  
+}
+.footer{
+  background-color: #f7fef1;
+  margin-bottom: 48px;
+  padding: 20px 0;
+  margin: 0 auto; 
 }
 .upper_side {
   width: 1030px;
   margin: 0 auto;
-  
+ 
 }
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+ 
 }
 .logo {
-  width: 100px;
-}
-.nav-right {
+  width: 150px;
   
 }
+
 .lists-right{
  margin: 35px 0px;
 }
@@ -41,12 +47,7 @@
   background-color: #3ccace;
   justify-content: flex-start;
 }
-/* 全体のスタイル */
-.swiper-wrapper {
-  width: 100%;
-  height: 200px;
 
-}
 
 
 /* 全スライド共通スタイル */
@@ -55,35 +56,65 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  line-height: 250px;
-  padding: 235px 0px;
+  color: #ffffff;
+
 }
-/* 4の倍数＋1枚目のスライドのスタイル（1枚目、5枚目…） */
+
 .swiper-slide:nth-child(4n+1) {
-  padding: 20px 0px;
   
-}
-/* 4の倍数＋2枚目のスライドのスタイル（2枚目、6枚目…） */
-.swiper-slide:nth-child(4n+2) {
-  padding: 20px 0px;
-  
-  
-}
-/* 4の倍数＋3枚目のスライドのスタイル（3枚目、7枚目…） */
-.swiper-slide:nth-child(4n+3) {
-  padding: 20px 0px;
-  
-}
-/* 4の倍数＋4枚目のスライドのスタイル（4枚目、8枚目…） */
-.swiper-slide:nth-child(4n+4) {
-  padding: 20px 0px;
  
 }
 
+.swiper-slide:nth-child(4n+2) {
+  
+}
+
+.swiper-slide:nth-child(4n+3) {
+  
+  
+}
+
+.swiper-slide:nth-child(4n+4) {
+  
+  
+}
+.swiper-slide:nth-child(4n+5) {
+  
+  
+}
+.swiper-slide:nth-child(4n+6) {
+  
+  
+}
+.swiper-slide:nth-child(4n+7) {
+  
+ 
+}
+.swiper-slide:nth-child(4n+8) {
+  
+  
+}
+.swiper-slide:nth-child(4n+9) {
+  
+  
+}
+.swiper-slide:nth-child(4n+10) {
+  
+  
+}
+.swiper-slide:nth-child(4n+11) {
+  
+  
+}
+.swiper-slide:nth-child(4n+12) {
+  
+  
+}
 .form-wrap {
   width: 50%;
   background-color: white;
   padding-bottom: 70px;
+  
 }
 .form-header {
   width: 100%;
@@ -178,3 +209,45 @@
 .select-box {
   margin: 2vh 0;
 }
+.first{
+  padding: 80px;
+  border: 3px solid  yellow;
+}
+.main{
+  border: 1px solid red
+}
+.nav_btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #87CEFA;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  justify-content: flex-end;
+}
+.nav_btn:hover{
+  color: #fff;
+  background: #87CEFA;
+}
+.lists-right{
+  display: flex;
+}
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.login-fee-btn {
+  width: 100%;
+  background: #79ea2d;
+  border: 1px solid #79ea2d;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+

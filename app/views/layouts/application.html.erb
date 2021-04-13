@@ -10,6 +10,39 @@
   </head>
 
   <body>
+  <header class="header">
+    <div class="upper_side">
+      <div class="nav">
+        <div class="nav_left">
+          <%= link_to image_tag("cooking-logo.png", class: :logo), root_path %>
+        </div>
+       
+      <% if user_signed_in? %>
+        <div class="nav_center">
+          <%= form_with(url: "#", local: true, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "料理名を検索", class: "search-input" %>
+          <%= form.submit "検索", class: "search-btn" %>
+          <% end %>
+        </div>
+      <% end %>
+
+        <div class="nav-right">
+          <ul class='lists-right'>
+           <% if user_signed_in? %>
+            <li><%= link_to current_user.nickname,"#" , class: "nav_btn"  %></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav_btn"  %></li>
+           <% else %>
+            <li><%= link_to 'ログイン', new_user_session_path, class: "nav_btn" %></li>
+            <li><%= link_to '新規登録', new_user_registration_path, class: "nav_btn" %></li>
+           <% end %>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </header>
     <%= yield %>
+  <footer　class="footer">
+  </footer>
   </body>
 </html>
