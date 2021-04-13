@@ -19,6 +19,7 @@ class User < ApplicationRecord
   end
    with_options presence: true, numericality: { other_than: 1 } do
     validates :sex_id
+    validates :cooking_experience_id
    end
  end
 end
