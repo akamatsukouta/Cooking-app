@@ -22,3 +22,51 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## users テーブル
+
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| nickname | string | null: false |
+| email    | string | null: false, unique: true |
+| encrypted_password | string | null: false |
+| sex_id   | integer| null: false |
+| cooking_experience_id | integer | null: false |
+
+### Association
+
+- has_many : cookings
+- has_many : comments
+
+
+
+ ## cooking テーブル
+
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| cooking_name | string | null: false |
+| point    | string |             |
+| recipe   | string | null: false |
+| user_id  | integer| null: false, foreign_key: true |
+
+### Association
+- has_many :comments
+- belongs_to :user
+
+
+
+
+## comments テーブル
+
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| text     | text   | null: false  |
+| user_id  | integer｜null: false, foreign_key: true |
+| cooking_id|integer |null: false, foreign_key: true |
+
+ ### Association
+- belongs_to :user
+- belongs_to :cooking
+
+
