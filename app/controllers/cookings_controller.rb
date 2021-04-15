@@ -9,5 +9,16 @@ class CookingsController < ApplicationController
   end
 
   def create
+    @cooking = Cooking.new(cooking_params)
+    if @cooking.save
+      redirect_to root_path   
+    else
+      render :new
+    end
+  end
+  
+  private
+  def cooking_params
+    params.require(:cooking).permit(:cooking_name, :image, :material, :recipe, :point1, :point2, :point3, :point4, :point5, :production_time).merge(user_id: current_user.id)
   end
 end
