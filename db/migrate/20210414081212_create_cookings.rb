@@ -9,7 +9,7 @@ class CreateCookings < ActiveRecord::Migration[6.0]
       t.string :point5,                  null: false
       t.string :recipe,                  null: false
       t.string :material,                null: false
-      t.integer :production_time_id,     null: false
+      t.integer :production_time,        null: false
       t.integer :user_id,                null: false, foreign_key: true
 
       t.timestamps

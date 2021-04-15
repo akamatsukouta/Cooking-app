@@ -1,157 +1,134 @@
-<div class="cooking-post-contents">
-  <div class="cooking-post-main">
-    <h2 class="cooking-post-title">レシピを投稿しよう！</h2>
+<header class='second-header'>
+  <%= image_tag("app-logo.png", class:"second-logo")%>
+</header>
 
-   <% form_with(model: :hoge, local: true) do |f| %>
-                                              
-      <div class="cooking-new-items">
-        <div class="weight-bold-text">
-          料理名
-         <span class="indispensable">必須</span>
-        </div>
-        <%= f.text_area :cooking_name, class:"cooking-text", id:"cooking-item-name", placeholder:"料理名（必須 10文字まで)", maxlength:"10" %>
-        <div class="cooking-material">
-          <div class="weight-bold-text">
-            材料
-            <span class="indispensable">必須</span>
-          </div>
-          <%= f.text_area :material, class:"cooking-text", id:"cooking-material-info", placeholder:"材料を記入（必須 1,000文字まで)", rows:"10", maxlength:"1000" %>
-        </div>
-      </div>
-                                                           
-      <div class="cooking-img-upload">
-        <div class="weight-bold-text">
-          料理完成画像
-          <span class="indispensable">必須</span>
-        </div>
-        <div class="click-upload">
-          <p>クリックして料理完成画像を載せましょう</p>
-          <%= f.file_filed :image, id:"cooking-image" %>
-        </div>
-      </div>
-                                            
-      <div class="cooking-new-items">
-        <div class="cooking-recipe">
-         <div class="weight-bold-text">
-          レシピ
-          <span class="indispensable">必須</span>
-         </div>
-         <%= f.text_area :recipe, class:"cooking-text", id:"cooking-recipe", placeholder:"レシピを記入 (必須 1,000文字まで)", row:"10", maxlength:"1000" %>
-        </div>
-      </div>
-      
-      <div class="cooking-img-upload">
-        <div class="weight-bold-text">
-          途中過程画像
-          <span class="indispensable">必須</span>
-        </div>
-        <div class="click-upload">
-          <p>クリックして料理過程画像を載せましょう</p>
-          <%= f.file_filed :image, id:"cooking-image" %>
-        </div>
-      </div>
-      <div class="cooking-new-items">
-        <div class="cooking-point1">
-         <div class="weight-bold-text">
-           ポイント1
-          <span class="indispensable">必須</span>
-         </div>
-         <%= f.text_area :point1, class:"cooking-point", id:"cooking-point", placeholder:"美味しくなるポイントを記入 (必須 1,000文字まで)", row:"10", maxlength:"1000" %>
-        </div>
-      </div>
+<%= form_with model: @cooking, local:true do |f|%>
 
-      <div class="cooking-img-upload">
-        <div class="weight-bold-text">
-          途中過程画像
-          <span class="indispensable">必須</span>
-        </div>
-        <div class="click-upload">
-          <p>クリックして料理過程画像を載せましょう</p>
-          <%= f.file_filed :image, id:"cooking-image" %>
-        </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">料理名</label>
+        <span class="indispensable">必須</span>
       </div>
-      <div class="cooking-new-items">
-        <div class="cooking-point2">
-         <div class="weight-bold-text">
-           ポイント2
-          <span class="indispensable">必須</span>
-         </div>
-         <%= f.text_area :point2, class:"cooking-point", id:"cooking-point", placeholder:"美味しくなるポイントを記入 (必須 1,000文字まで)", row:"10", maxlength:"1000" %>
-        </div>
+      <%= f.text_area :cooking_name, class:"input-default", id:"cooking_name", maxlength:"15" %>
+    </div>
+    
+    <div class="form-group">
+      <div class="form-text-wrap">
+        <label class="form-text">料理完成画像</label>
+        <span class="indispensable">必須</span>
       </div>
+      <div class="click-upload">
+        <%= f.file_field :image, name:"cooking[image]", id:"cooking_image" %>
+        <div id="new-image"></div>
+      </div>
+    </div>
+  
 
-      <div class="cooking-img-upload">
-        <div class="weight-bold-text">
-          途中過程画像
+    <div class="form-group">
+        <div class="form-text-wrap">
+          <label class="form-text">材料</label>  
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :material, class:"form-default", id:"cooking_material", placeholder:"使用した材料を記入（必須 1,000文字まで）", rows:"7" ,maxlength:"1000" %>
+    </div>
+    
+    <div class="form-group">
+        <div class="form-text-wrap">
+          <label class="form-text">レシピ</label>  
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :recipe, class:"form-default", id:"cooking_recipe", placeholder:"レシピを記入（必須 1,000文字まで）", rows:"7" ,maxlength:"1000" %>
+    </div>
+    
+    <div class="form-group">
+        <div class="form-text-wrap">
+          <label class="form-text">ポイント1</label>  
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :point1, class:"form-default", rows:"7", maxlength:"1000" %>
+        <div class="form-text-wrap">
+          <label class="form-text">画像</label>
           <span class="indispensable">必須</span>
         </div>
         <div class="click-upload">
-          <p>クリックして料理過程画像を載せましょう</p>
-          <%= f.file_filed :image, id:"cooking-image" %>
+          <%= f.file_field :images, name:"cooking[image]", id:"cooking_image" %>
+          <div id="new-image"></div>
         </div>
-      </div>
-      <div class="cooking-new-items">
-        <div class="cooking-point3">
-         <div class="weight-bold-text">
-           ポイント3
-          <span class="indispensable">必須</span>
-         </div>
-         <%= f.text_area :point3, class:"cooking-point", id:"cooking-point", placeholder:"美味しくなるポイントを記入 (必須 1,000文字まで)", row:"10", maxlength:"1000" %>
-        </div>
-      </div>
+    </div>
 
-      <div class="cooking-img-upload">
-        <div class="weight-bold-text">
-          途中過程画像
+    <div class="form-group">
+        <div class="form-text-wrap">
+          <label class="form-text">ポイント2</label>  
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :point2, class:"form-default", rows:"7", maxlength:"1000" %>
+        <div class="form-text-wrap">
+          <label class="form-text">画像</label>
           <span class="indispensable">必須</span>
         </div>
         <div class="click-upload">
-          <p>クリックして料理過程画像を載せましょう</p>
-          <%= f.file_filed :image, id:"cooking-image" %>
+          <%= f.file_field :image, name:"cooking[image]", id:"cooking_image" %>
+          <div id="new-image"></div>
         </div>
-      </div>
-      <div class="cooking-new-items">
-        <div class="cooking-point4">
-         <div class="weight-bold-text">
-           ポイント4
-          <span class="indispensable">必須</span>
-         </div>
-         <%= f.text_area :point4, class:"cooking-point", id:"cooking-point", placeholder:"美味しくなるポイントを記入 (必須 1,000文字まで)", row:"10", maxlength:"1000" %>
-        </div>
-      </div>
+    </div>
 
-      <div class="cooking-img-upload">
-        <div class="weight-bold-text">
-          途中過程画像
+    <div class="form-group">
+        <div class="form-text-wrap">
+          <label class="form-text">ポイント3</label>  
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :point3, class:"form-default", rows:"7", maxlength:"1000" %>
+        <div class="form-text-wrap">
+          <label class="form-text">画像</label>
           <span class="indispensable">必須</span>
         </div>
         <div class="click-upload">
-          <p>クリックして料理過程画像を載せましょう</p>
-          <%= f.file_filed :image, id:"cooking-image" %>
+          <%= f.file_field :image, name:"cooking[image]", id:"cooking_image" %>
+          <div id="new-image"></div>
         </div>
-      </div>
-      <div class="cooking-new-items">
-        <div class="cooking-point5">
-         <div class="weight-bold-text">
-           ポイント1
+    </div>
+
+    <div class="form-group">
+        <div class="form-text-wrap">
+          <label class="form-text">ポイント4</label>  
           <span class="indispensable">必須</span>
-         </div>
-         <%= f.text_area :point5, class:"cooking-point", id:"cooking-point", placeholder:"美味しくなるポイントを記入 (必須 1,000文字まで)", row:"10", maxlength:"1000" %>
         </div>
-      </div>
-      
-      <div class="form-group">
-        <div class='form-text-wrap'>
-          <label class="form-text">制作時間</label>
+        <%= f.text_area :point4, class:"form-default", rows:"7", maxlength:"1000" %>
+        <div class="form-text-wrap">
+          <label class="form-text">画像</label>
           <span class="indispensable">必須</span>
-         <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"cooking_time_fee"}) %>  
         </div>
+        <div class="click-upload">
+          <%= f.file_field :image, name:"cooking[image]", id:"cooking_image"%>
+          <div id="new-image"></div>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="form-text-wrap">
+          <label class="form-text">ポイント5</label>  
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :point5, class:"form-default", rows:"7", maxlength:"1000" %>
+        <div class="form-text-wrap">
+          <label class="form-text">画像</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <div class="click-upload">
+          <%= f.file_field :image, name:"cooking[image]", id:"cooking_image" %>
+          <div id="new-image"></div>
+        </div>
+    </div>
+    
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">制作時間</label>
+        <span class="indispensable">必須</span>
       </div>
-       
-      <div class="cooking-post-btn">
-         <%= f.submit "投稿する" ,class:"cooking-btn" %>
-         <%= link_to 'トップページに戻る', root_path, class:"back_btn" %>   
-      </div>
-   <% end %>
-  </div>
-</div>
+      <%= f.text_area :production_time, class:"input-default", id:"cooking_production_time", maxlength:"15" %>
+    </div>
+    
+    <div class='register-btn'>
+      <%= f.submit "投稿" ,class:"register-green-btn" %>
+    </div>
+<% end %>
