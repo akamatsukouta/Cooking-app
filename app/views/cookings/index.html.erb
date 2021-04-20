@@ -1,23 +1,24 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
   </head>
  <body>
  <div class="swiper-container">
   <div class="swiper-wrapper">
-    <div class="swiper-slide"><%= image_tag("rice.jpeg", class:"cooking-logo1")%></div>
-    <div class="swiper-slide"><%= image_tag("sanma.jpeg", class:"cooking-logo2")%></div>
-    <div class="swiper-slide"><%= image_tag("miso-soup.jpeg", class:"cooking-logo3")%></div>
-    <div class="swiper-slide"><%= image_tag("syokupann.jpeg", class:"cooking-logo4")%></div>
-    <div class="swiper-slide"><%= image_tag("omuraisu.jpeg", class:"cooking-logo1")%></div>
-    <div class="swiper-slide"><%= image_tag("syoygayaki.png", class:"cooking-logo2")%></div>
-    <div class="swiper-slide"><%= image_tag("rice.jpeg", class:"cooking-logo3")%></div>
-    <div class="swiper-slide"><%= image_tag("rice.jpeg", class:"cooking-logo4")%></div>
-    <div class="swiper-slide"><%= image_tag("rice.jpeg", class:"cooking-logo1")%></div>
-    <div class="swiper-slide"><%= image_tag("rice.jpeg", class:"cooking-logo2")%></div>
-    <div class="swiper-slide"><%= image_tag("rice.jpeg", class:"cooking-logo3")%></div>
-    <div class="swiper-slide"><%= image_tag("rice.jpeg", class:"cooking-logo4")%></div>
+    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= video_tag("/assets/videos/takikomigohann.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
   </div>
  </div>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
@@ -29,7 +30,7 @@
            disableOnInteraction: false,
            reverseDirection: false
     },
-    slidesPerGroup: 3,
+    spaceBetween: 10,
 	  slidesPerView: 3,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -42,6 +43,35 @@
     }
   });
  </script>
+  <div class="border"></div>
+
+  <div class='cooking-card-contents'>
+   <h2 class='title'>新規投稿料理</h2>
+    <ul class='cooking-lists'>
+
+     <% @cookings.each do |cooking|%>
+      <li class='list'>
+       <div class="slider">
+        <% cooking.images.each do |image| %>
+         <div class='cooking-img-content'>
+          <%= image_tag(image, class: 'sized') %>
+         </div>
+        <% end %>
+       </div>
+         <div class="cooking-info">
+            <h3 class="recipe-name"><%= cooking.cooking_name %></h3>
+            <h3 class="recipe-time"><%= cooking.production_time %></h3>
+         </div>
+      </li>
+     <% end %>
+    </ul>
+  </div>
+
   
+
+
+ <footer class="footer">
+    <div class="lower_side">
+  </footer>
  </body>
 </html>

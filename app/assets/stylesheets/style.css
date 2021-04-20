@@ -5,12 +5,6 @@
   margin: 0 auto; 
   
 }
-.footer{
-  background-color: #f7fef1;
-  margin-bottom: 48px;
-  padding: 20px 0;
-  margin: 0 auto; 
-}
 .upper_side {
   width: 1030px;
   margin: 0 auto;
@@ -60,56 +54,7 @@
 
 }
 
-.swiper-slide:nth-child(4n+1) {
-  
- 
-}
 
-.swiper-slide:nth-child(4n+2) {
-  
-}
-
-.swiper-slide:nth-child(4n+3) {
-  
-  
-}
-
-.swiper-slide:nth-child(4n+4) {
-  
-  
-}
-.swiper-slide:nth-child(4n+5) {
-  
-  
-}
-.swiper-slide:nth-child(4n+6) {
-  
-  
-}
-.swiper-slide:nth-child(4n+7) {
-  
- 
-}
-.swiper-slide:nth-child(4n+8) {
-  
-  
-}
-.swiper-slide:nth-child(4n+9) {
-  
-  
-}
-.swiper-slide:nth-child(4n+10) {
-  
-  
-}
-.swiper-slide:nth-child(4n+11) {
-  
-  
-}
-.swiper-slide:nth-child(4n+12) {
-  
-  
-}
 .form-wrap {
   width: 50%;
   background-color: white;
@@ -153,6 +98,9 @@
   font-size: 16px;
   resize: none;
 }
+.form-default{
+  margin-bottom: 30px;
+}
 .info-text {
   color: #888;
   font-size: 15px;
@@ -189,19 +137,6 @@
   align-items: center;
   justify-content: center;
 }
-.second-fotter {
-  width: 100%;
-  min-width: 800px;
-  height: 200px;
-  background-color: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-}
-.second-fotter-logo {
-  width: 185px;
-  height: 49px;
-  margin: 0 auto;
-}
 .register-btn {
   width: 50%;
   margin: 0 auto;
@@ -213,8 +148,8 @@
   padding: 80px;
   border: 3px solid  yellow;
 }
-.main{
-  border: 1px solid red
+.border{
+  border: 10px solid green;
 }
 .nav_btn{
   display: inline-block;
@@ -250,4 +185,179 @@
   font-size: 14px;
   cursor: pointer;
 }
+.cooking-post-contents {
+  background-color: #f5f5f5;
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+}
+.cooking-post-main {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 450px;
+  padding: 10vh 15vw;
+}
+.cooking-post-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+.cooking-new-items {
+  padding: 2vh 0;
+}
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+.cooking-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+.cooking-material {
+  margin-top: 2vh;
+}
+.cooking-img-upload {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+.click-upload {
+  margin: 15px 0;
+  min-width: 250px;
+}
+.click-upload>p {
+  margin-bottom: 15px;
+}
+.cooking-recipe{
+  margin-top: 2vh;
+}
+.cooking-point-all{
+  margin-top: 2vh;
+}
+.cooking-point{
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+.cooking-production-time{
+  padding: 2vh 0;
+}
+.error-alert {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
 
+.error-message {
+  font-size: 1.3vw;
+  list-style: circle;
+  color: rgb(182, 48, 0);
+}
+.new-img{
+  width: 400px;
+  object-fit: cover;
+}
+.filed{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.image-label{
+  width: 100%;
+  margin-top: 5px;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+.view_box{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+img.sized {
+
+}
+.cooking-name{
+  font-size: 25px;
+  
+}
+
+.cooking-card-body{
+  
+}
+.cooking-card-contents {
+  background-color: #f7fef1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.cooking-card-contents>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.cooking-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cooking-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+.cooking-img-content {
+  position: relative;
+}
+.sized {
+  width: 33vh;
+  height: 33vh;
+}
+.lower_side{
+  background-color: forestgreen;
+
+}
+.cooking-info{
+  background-color: #f7fef1;
+  color: black;
+  padding: 1vw;
+  
+}
+.recipe-name{
+  font-size: 2.5vh;
+  font-style: normal;
+}
