@@ -1,7 +1,6 @@
 class CookingsController < ApplicationController
 
   def index
-   
     @cookings = Cooking.order("created_at DESC")
   end
 
@@ -16,6 +15,10 @@ class CookingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def search
+    @cookings = Cooking.search(params[:keyword])
   end
   
   private
