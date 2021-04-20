@@ -355,9 +355,24 @@ img.sized {
   background-color: #f7fef1;
   color: black;
   padding: 1vw;
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .recipe-name{
   font-size: 2.5vh;
   font-style: normal;
+}
+.recipe-time{
+  font-size: 2.5vh;
+  font-style: normal;
+}
+.cooking_card_user{
+  height: 2vh;
+  width: 2vh;
+  margin-right: 0.5vw;
+  display: block;
+  font-size: 12px;
+  text-align: right;
+  text-decoration: underline;
 }

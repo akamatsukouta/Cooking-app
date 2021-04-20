@@ -17,6 +17,10 @@ class CookingsController < ApplicationController
     end
   end
 
+  def show
+    @cooking = Cooking.find(params[:id])
+  end
+
   def search
     @cookings = Cooking.search(params[:keyword])
   end
