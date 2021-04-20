@@ -303,15 +303,8 @@
   margin: 0 auto;
   padding-top: 20px;
 }
-img.sized {
-
-}
 .cooking-name{
   font-size: 25px;
-  
-}
-
-.cooking-card-body{
   
 }
 .cooking-card-contents {
@@ -375,4 +368,68 @@ img.sized {
   font-size: 12px;
   text-align: right;
   text-decoration: underline;
+}
+
+.contents-details{
+ background-color: #f7fef1;
+  
+}
+.details-img{
+  
+}
+.img-sized{
+  width: 33vh;
+  height: 33vh;
+  padding: 10px;
+}
+.details-img-content{
+  color: black;
+  display: flex;
+  justify-content: center;
+ 
+}
+.details-list{
+  background-color: #f7fef1;
+}
+.table{
+  border-collapse: collapse;
+  margin-bottom: 32px;
+  width: 50%;
+ 
+}
+.details-recipe1{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #89a18c;
+  width: 30%;
+  padding: 8px;
+}
+.details-recipe2{
+  text-align: left;
+  border: 1px solid #89a18c;
+  border-collapse: collapse;
+  width: 70%;
+  padding: 16px 8px;
+}
+.tr{
+  
+}
+.details-recipe-side1{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #89a18c;
+  width: 30%;
+  padding: 8px;
+  
+}
+.details-recipe-side2{
+  text-align: left;
+  border: 1px solid #89a18c;
+  border-collapse: collapse;
+  width: 70%;
+  padding: 16px 8px;
 }

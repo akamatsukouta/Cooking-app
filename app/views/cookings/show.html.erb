@@ -1,0 +1,54 @@
+<div class="contents-details">
+  <ul class='cooking-lists'>
+   <li class="details-list">
+
+     <div class='details-img-content'>
+      <% @cooking.images.each do |image| %>
+       <%=image_tag(image, class: 'img-sized') %>
+      <% end %>
+     </div>
+    
+    <table class="table">
+     <tbody class="tbody">
+
+      <tr>
+       <th class="details-recipe1">料理名</th>
+       <td class="details-recipe2"><%= @cooking.cooking_name %></td>
+      </tr>
+
+      <tr>
+       <th class="details-recipe1">材料</th>
+       <td class="details-recipe2"><%= @cooking.material %></td>
+      </tr>
+       
+      <tr>
+       <th class="details-recipe1">レシピ</th>
+       <td class="details-recipe2"><%= @cooking.recipe%></td>
+      </tr>
+
+      <tr>
+       <th class="details-recipe-side1">ポイント１</th>
+       <td class="details-recipe-side2"><%= @cooking.point1%></td>
+      </tr>
+
+      <tr class="tr">
+       <th class="details-recipe-side1">ポイント２</th>
+       <td class="details-recipe-side2"><%= @cooking.point2%></td>
+      </tr>
+
+      <tr class="tr">
+       <th class="details-recipe-side1">ポイント３</th>
+       <td class="details-recipe-side2"><%= @cooking.point3%></td>
+      </tr>
+
+      <tr class="tr">
+       <th class="details-recipe-side1">制作時間</th>
+       <td class="details-recipe-side2"><%= @cooking.production_time%></td>
+      </tr>
+
+     </tbody>
+    </table>
+
+   </li> 
+  </ul>
+</div>
