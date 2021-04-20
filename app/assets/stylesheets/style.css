@@ -148,7 +148,7 @@
   padding: 80px;
   border: 3px solid  yellow;
 }
-.main{
+.border{
   border: 10px solid green;
 }
 .nav_btn{
@@ -303,6 +303,61 @@
   margin: 0 auto;
   padding-top: 20px;
 }
-.file{
+img.sized {
+
+}
+.cooking-name{
+  font-size: 25px;
   
+}
+
+.cooking-card-body{
+  
+}
+.cooking-card-contents {
+  background-color: #f7fef1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.cooking-card-contents>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.cooking-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cooking-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+.cooking-img-content {
+  position: relative;
+}
+.sized {
+  width: 33vh;
+  height: 33vh;
+}
+.lower_side{
+  background-color: forestgreen;
+
+}
+.cooking-info{
+  background-color: #f7fef1;
+  color: black;
+  padding: 1vw;
+  
+}
+.recipe-name{
+  font-size: 2.5vh;
+  font-style: normal;
 }
