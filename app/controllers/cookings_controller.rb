@@ -27,6 +27,15 @@ class CookingsController < ApplicationController
     redirect_to root_path
   end
 
+  def edit
+    @cooking = Cooking.find(params[:id])
+  end
+
+  def update
+    cooking = Cooking.find(params[:id])
+    cooking.update(cooking_params)
+  end
+
   def search
     @cookings = Cooking.search(params[:keyword])
   end

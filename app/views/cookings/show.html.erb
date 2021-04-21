@@ -1,7 +1,7 @@
 <div class="contents-details">
 
  <div class="cooking-manege">
-   <%= link_to "編集", "#", class: "cooking_btn"%>
+   <%= link_to "編集", edit_cooking_path(@cooking.id), class: "cooking_btn"%>
    <%= link_to "削除", cooking_path(@cooking.id), method: :delete, class: "cooking_btn"%>
  </div>
 
