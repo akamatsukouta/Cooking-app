@@ -14,6 +14,7 @@
          <div class="cooking-info">
             <h3 class="recipe-name"><%= cooking.cooking_name %></h3>
             <h3 class="recipe-time"><%= cooking.production_time %></h3>
+            <%= link_to "by #{cooking.user.nickname}", class: :cooking_card_user%>
          </div>
       </li>
      <% end %>

@@ -1,0 +1,89 @@
+<div class="border"></div>
+<div class="contents-details">
+
+ <div class="cooking-manege">
+   <%= link_to "編集", edit_cooking_path(@cooking.id), class: "cooking_btn"%>
+   <%= link_to "削除", cooking_path(@cooking.id), method: :delete, class: "cooking_btn"%>
+ </div>
+
+  <ul class='cooking-lists'>
+   <li class="details-list">
+
+     <div class='details-img-content'>
+      <% @cooking.images.each do |image| %>
+       <%=image_tag(image, class: 'img-sized') %>
+      <% end %>
+     </div>
+    
+    <table class="table">
+     <tbody class="tbody">
+
+      <tr>
+       <th class="details-recipe1">料理名</th>
+       <td class="details-recipe2"><%= @cooking.cooking_name %></td>
+      </tr>
+
+      <tr>
+       <th class="details-recipe1">材料</th>
+       <td class="details-recipe2"><%= @cooking.material %></td>
+      </tr>
+       
+      <tr>
+       <th class="details-recipe1">レシピ</th>
+       <td class="details-recipe2"><%= @cooking.recipe%></td>
+      </tr>
+
+      <tr>
+       <th class="details-recipe1">ポイント１</th>
+       <td class="details-recipe2"><%= @cooking.point1%></td>
+      </tr>
+
+      <tr class="tr">
+       <th class="details-recipe1">ポイント２</th>
+       <td class="details-recipe2"><%= @cooking.point2%></td>
+      </tr>
+
+      <tr class="tr">
+       <th class="details-recipe1">ポイント３</th>
+       <td class="details-recipe2"><%= @cooking.point3%></td>
+      </tr>
+
+      <tr class="tr">
+       <th class="details-recipe1">制作時間</th>
+       <td class="details-recipe2"><%= @cooking.production_time%></td>
+      </tr>
+
+      <tr>
+       <th class="details-recipe1">ユーザー名</th>
+       <td class="details-recipe2"><%= link_to "#{@cooking.user.nickname}" %></td>
+      </tr>
+
+     </tbody>
+    </table>
+
+   </li> 
+  </ul>
+
+  <div class="cooking-comments">
+    <% if current_user.id %>
+     <%= form_with(model: [@cooking, @comment], local: true) do |f| %>
+      <div class="field">
+        <%= f.label :comment, "コメント" %><br />
+        <%= f.text_field :text, id:"comment_text"%>
+      </div>
+      <div class="actions">
+        <%= f.submit "送信", class:"form_btn"%>
+      </div>
+     <% end %>
+    <% end %>
+    <ul class="comments_lists">
+      <% @comments.each do |comment| %>
+        <li class="comments_list">
+           <%= comment.text%>
+           <%= link_to comment.user.nickname, class: "comment_user"%>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>

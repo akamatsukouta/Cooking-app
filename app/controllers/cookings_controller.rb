@@ -17,6 +17,27 @@ class CookingsController < ApplicationController
     end
   end
 
+  def show
+    @cooking = Cooking.find(params[:id])
+    @comment = Comment.new
+    @comments = @cooking.comments.includes(:user)
+  end
+
+  def destroy
+    cooking = Cooking.find(params[:id])
+    cooking.destroy
+    redirect_to root_path
+  end
+
+  def edit
+    @cooking = Cooking.find(params[:id])
+  end
+
+  def update
+    cooking = Cooking.find(params[:id])
+    cooking.update(cooking_params)
+  end
+
   def search
     @cookings = Cooking.search(params[:keyword])
   end

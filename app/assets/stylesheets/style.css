@@ -56,9 +56,9 @@
 
 
 .form-wrap {
-  width: 50%;
+  width: 100%;
   background-color: white;
-  padding-bottom: 70px;
+  height: 100%;
   
 }
 .form-header {
@@ -303,15 +303,8 @@
   margin: 0 auto;
   padding-top: 20px;
 }
-img.sized {
-
-}
 .cooking-name{
   font-size: 25px;
-  
-}
-
-.cooking-card-body{
   
 }
 .cooking-card-contents {
@@ -355,9 +348,204 @@ img.sized {
   background-color: #f7fef1;
   color: black;
   padding: 1vw;
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .recipe-name{
   font-size: 2.5vh;
   font-style: normal;
+}
+.recipe-time{
+  font-size: 2.5vh;
+  font-style: normal;
+}
+.cooking_card_user{
+  height: 2vh;
+  width: 2vh;
+  margin-right: 0.5vw;
+  display: block;
+  font-size: 12px;
+  text-align: right;
+  text-decoration: underline;
+}
+
+.contents-details{
+ background-color: #f7fef1;
+  
+}
+.img-sized{
+  width: 33vh;
+  height: 33vh;
+  padding: 10px;
+}
+.details-img-content{
+  color: black;
+  display: flex;
+  justify-content: center;
+ 
+}
+.details-list{
+  background-color: #f7fef1;
+}
+.table{
+  border-collapse: collapse;
+  margin-bottom: 32px;
+  width: 50%;
+ 
+}
+.details-recipe1{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #89a18c;
+  width: 30%;
+  padding: 8px;
+}
+.details-recipe2{
+  text-align: left;
+  border: 1px solid #89a18c;
+  border-collapse: collapse;
+  width: 70%;
+  padding: 16px 8px;
+}
+.details-recipe-side1{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #89a18c;
+  width: 30%;
+  padding: 8px;
+  
+}
+.details-recipe-side2{
+  text-align: left;
+  border: 1px solid #89a18c;
+  border-collapse: collapse;
+  width: 70%;
+  padding: 16px 8px;
+}
+.cooking-manege{
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+.cooking_btn{
+  display: block;
+  padding: 0.4em 1.6em;
+  font-size: 0.4em;
+  color: #999;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #999 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 0 4px;
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #87CEFA;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  justify-content: flex-end;
+}
+.cooking_btn:hover{
+  color: #fff;
+  background: #87CEFA;
+}
+.cooking-comments{
+  background-color: #f6f6f6;
+  padding: 20px;
+  margin: 28px 0 40px 0;
+}
+.field{
+  margin: 10px 0;
+}
+.actions{
+  margin-bottom: 40px;
+}
+.form_btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: #87CEFA;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+}
+.form_btn:hover{
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+.comments_lists{
+  padding-left: 20px;
+}
+.comments_list{
+  list-style-type: square;
+  padding-bottom: 5px;
+}
+.comment_user{
+  font-size: 16px;
+  color: #999;
+  text-decoration: underline;
+}
+.main{
+  width: 79%;
+  display: flex;
+  flex-direction: column;
+  margin:  auto;
+  padding-top: 20px;
+}
+.page-heading{
+  background: #f7fef1;
+  
+  border-radius: 2px;
+  color: #fff;
+  
+}
+.user-details1{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #89a18c;
+  width: 30%;
+  padding: 8px;
+}
+.user-details2{
+  text-align: left;
+  border: 1px solid #89a18c;
+  border-collapse: collapse;
+  width: 70%;
+  padding: 16px 8px;
+}
+.user-details{
+  background: #f7fef1;
+  
+}
+.top-image{
+  height: 100%;
+  width: 100%;
+}
+.cooking-video{
+  background-color: #f7fef1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.cooking-video>.title{
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
 }
