@@ -1,0 +1,28 @@
+<div class="border"></div>
+<div class="user-details">
+ <div class="main">
+  <div class="inner">
+    <div class="user_wrapper">
+      <h2 class="page-heading">
+        <%= "#{@user.nickname}さんの情報"%>
+      </h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="user-details1">ニックネーム</th>
+            <td class="user-details2"><%= @user.nickname %></td>
+          </tr>
+          <tr>
+            <th class="user-details1">性別</th>
+            <td class="user-details2"><%= @user.sex_id%></td>
+          </tr>
+          <tr>
+            <th class="user-details1">料理経験</th>
+            <td class="user-details2"><%= @user.cooking_experience_id %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+ </div>
+</div>

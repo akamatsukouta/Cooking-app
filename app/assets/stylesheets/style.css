@@ -56,9 +56,9 @@
 
 
 .form-wrap {
-  width: 50%;
+  width: 100%;
   background-color: white;
-  padding-bottom: 70px;
+  height: 100%;
   
 }
 .form-header {
@@ -374,9 +374,6 @@
  background-color: #f7fef1;
   
 }
-.details-img{
-  
-}
 .img-sized{
   width: 33vh;
   height: 33vh;
@@ -500,4 +497,55 @@
   font-size: 16px;
   color: #999;
   text-decoration: underline;
+}
+.main{
+  width: 79%;
+  display: flex;
+  flex-direction: column;
+  margin:  auto;
+  padding-top: 20px;
+}
+.page-heading{
+  background: #f7fef1;
+  
+  border-radius: 2px;
+  color: #fff;
+  
+}
+.user-details1{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #89a18c;
+  width: 30%;
+  padding: 8px;
+}
+.user-details2{
+  text-align: left;
+  border: 1px solid #89a18c;
+  border-collapse: collapse;
+  width: 70%;
+  padding: 16px 8px;
+}
+.user-details{
+  background: #f7fef1;
+  
+}
+.top-image{
+  height: 100%;
+  width: 100%;
+}
+.cooking-video{
+  background-color: #f7fef1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.cooking-video>.title{
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
 }

@@ -5,6 +5,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
   </head>
  <body>
+   
+   <div class="contents-img">
+      <div class="border"></div>
+      <%= image_tag 'Dining scenery.jpeg', class: "top-image"%>
+   </div>
+
+   <div class="cooking-video">
+     <h2 class='title'>今週のおすすめ料理</h2>
+   </div>
+
  <div class="swiper-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
@@ -61,7 +71,7 @@
          <div class="cooking-info">
             <h3 class="recipe-name"><%= cooking.cooking_name %></h3>
             <h3 class="recipe-time"><%= cooking.production_time %></h3>
-            <%= link_to " #{cooking.user.nickname}", class: "cooking_card_user"%>
+            <%= link_to " #{cooking.user.nickname}", user_path(cooking.user_id),class: "cooking_card_user"%>
          </div>
       </li>
      <% end %>
