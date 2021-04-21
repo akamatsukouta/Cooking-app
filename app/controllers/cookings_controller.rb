@@ -1,4 +1,7 @@
 class CookingsController < ApplicationController
+  before_action :authenticate_user!, expect: [:index, :show]
+  
+
 
   def index
     @cookings = Cooking.order("created_at DESC")
@@ -46,4 +49,5 @@ class CookingsController < ApplicationController
   def cooking_params
     params.require(:cooking).permit(:cooking_name, :material, :recipe, :point1, :point2, :point3, :production_time, images:[]).merge(user_id: current_user.id)
   end
+
 end
