@@ -21,6 +21,12 @@ class CookingsController < ApplicationController
     @cooking = Cooking.find(params[:id])
   end
 
+  def destroy
+    cooking = Cooking.find(params[:id])
+    cooking.destroy
+    redirect_to root_path
+  end
+
   def search
     @cookings = Cooking.search(params[:keyword])
   end

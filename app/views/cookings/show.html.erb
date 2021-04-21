@@ -1,4 +1,10 @@
 <div class="contents-details">
+
+ <div class="cooking-manege">
+   <%= link_to "編集", "#", class: "cooking_btn"%>
+   <%= link_to "削除", cooking_path(@cooking.id), method: :delete, class: "cooking_btn"%>
+ </div>
+
   <ul class='cooking-lists'>
    <li class="details-list">
 
@@ -27,23 +33,28 @@
       </tr>
 
       <tr>
-       <th class="details-recipe-side1">ポイント１</th>
-       <td class="details-recipe-side2"><%= @cooking.point1%></td>
+       <th class="details-recipe1">ポイント１</th>
+       <td class="details-recipe2"><%= @cooking.point1%></td>
       </tr>
 
       <tr class="tr">
-       <th class="details-recipe-side1">ポイント２</th>
-       <td class="details-recipe-side2"><%= @cooking.point2%></td>
+       <th class="details-recipe1">ポイント２</th>
+       <td class="details-recipe2"><%= @cooking.point2%></td>
       </tr>
 
       <tr class="tr">
-       <th class="details-recipe-side1">ポイント３</th>
-       <td class="details-recipe-side2"><%= @cooking.point3%></td>
+       <th class="details-recipe1">ポイント３</th>
+       <td class="details-recipe2"><%= @cooking.point3%></td>
       </tr>
 
       <tr class="tr">
-       <th class="details-recipe-side1">制作時間</th>
-       <td class="details-recipe-side2"><%= @cooking.production_time%></td>
+       <th class="details-recipe1">制作時間</th>
+       <td class="details-recipe2"><%= @cooking.production_time%></td>
+      </tr>
+
+      <tr>
+       <th class="details-recipe1">ユーザー名</th>
+       <td class="details-recipe2"><%= link_to "#{@cooking.user.nickname}" %></td>
       </tr>
 
      </tbody>
