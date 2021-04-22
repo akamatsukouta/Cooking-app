@@ -10,13 +10,12 @@ class User < ApplicationRecord
  with_options presence: true do
     validates :nickname
     validates :email
+    validates :sex
+    validates :cooking_experience
 
   with_options format: { with: VALID_PASSWORD_REGEX }, length: {minimum: 6} do
     validates :password
   end
-   with_options presence: true, numericality: { other_than: 1 } do
-    validates :sex_id
-    validates :cooking_experience_id
-   end
+  
  end
 end
