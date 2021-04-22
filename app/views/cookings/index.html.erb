@@ -6,9 +6,12 @@
   </head>
  <body>
    
-   <div class="contents-img">
-      <div class="border"></div>
-      <%= image_tag 'Dining scenery.jpeg', class: "top-image"%>
+   <div class="contents-img-title">
+   <h2 class="app-title">RYORITOKO</h2>
+    <div class='store-btn'>
+      <%= link_to image_tag("https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2011-09-21&kind=iossoftware&bubble=ios_apps", class:"apple-btn"), "#" %>
+      <%= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
+    </div>
    </div>
 
    <div class="cooking-video">
@@ -17,18 +20,18 @@
 
  <div class="swiper-container">
   <div class="swiper-wrapper">
-    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
-    <div class="swiper-slide"><%= video_tag("/assets/videos/takikomigohann.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
-    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
-    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
-    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
-    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
-    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
-    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
-    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
-    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
-    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
-    <div class="swiper-slide"><%= video_tag("/assets/videos/sanma.mp4",autoplay: :true, loop: :true, muted: :true, style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= image_tag('nanohana.png', style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= image_tag('ume.png', style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= image_tag('katuo.png', style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= image_tag('taimeshi.png', style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= image_tag('takenokogohann.png', style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= image_tag('sawara.png', style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= image_tag('nanopepe.png', style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= image_tag('takenoko.png', style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= image_tag('tobiuo.png', style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= image_tag('sinzyaga.png', style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= image_tag('sintamanegi.png', style: "width:100%;") %></div>
+    <div class="swiper-slide"><%= image_tag('harukyabetsu.png', style: "width:100%;") %></div>
   </div>
  </div>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>

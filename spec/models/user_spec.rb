@@ -7,17 +7,17 @@ RSpec.describe User, type: :model do
 
   describe 'ユーザー新規登録' do
     context '新規登録できるとき' do
-      it '全ての項目(nickname, email, sex_id, cooking_experience_id, password, password_confirmation)が存在すれば登録できる' do
+      it '全ての項目(nickname, email, sex, cooking_experience, password, password_confirmation)が存在すれば登録できる' do
         expect(@user).to be_valid
       end
       it 'passwordとpassword_confirmationが6文字以上であれば登録できる' do
-        @user.password = 'asd123'
-        @user.password_confirmation = 'asd123'
+        @user.password = 'asd678'
+        @user.password_confirmation = 'asd678'
         expect(@user).to be_valid
       end
       it 'passwordとpassword_confirmationは半角英数字混合の場合登録できる' do
-        @user.password = 'asd123'
-        @user.password_confirmation = 'asd123'
+        @user.password = 'asd678'
+        @user.password_confirmation = 'asd678'
         expect(@user).to be_valid
       end
       it 'emailは@がある場合のみ登録できる' do
@@ -48,15 +48,15 @@ RSpec.describe User, type: :model do
         another_user.valid?
         expect(another_user.errors.full_messages).to include('Email has already been taken')
       end
-      it 'sex_idの情報がない場合登録できない' do
-        @user.sex_id = 1
+      it 'sexが空の場合登録できない' do
+        @user.sex = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Sex must be other than 1")
+        expect(@user.errors.full_messages).to include("Sex can't be blank")
       end
-      it 'cooking_experience_idの情報がない場合登録できない' do
-        @user.cooking_experience_id = 1
+      it 'cooking_experienceがからの場合登録できない' do
+        @user.cooking_experience = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Cooking experience must be other than 1")
+        expect(@user.errors.full_messages).to include("Cooking experience can't be blank")
       end
       it 'passwordが空欄の場合登録できない' do
         @user.password = ''

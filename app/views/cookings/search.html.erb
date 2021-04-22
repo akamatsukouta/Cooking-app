@@ -1,5 +1,5 @@
+ <div class="border"></div>
  <div class='cooking-card-contents'>
-   <h2 class='title'>新規投稿料理</h2>
     <ul class='cooking-lists'>
 
      <% @cookings.each do |cooking|%>
@@ -14,7 +14,7 @@
          <div class="cooking-info">
             <h3 class="recipe-name"><%= cooking.cooking_name %></h3>
             <h3 class="recipe-time"><%= cooking.production_time %></h3>
-            <%= link_to "by #{cooking.user.nickname}", class: :cooking_card_user%>
+            <%= link_to " #{cooking.user.nickname}",user_path(cooking.user_id), class: :cooking_card_user%>
          </div>
       </li>
      <% end %>

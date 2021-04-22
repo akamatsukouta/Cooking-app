@@ -1,10 +1,12 @@
 <div class="border"></div>
 <div class="contents-details">
 
- <div class="cooking-manege">
+ <% if current_user.id == @cooking.user_id  %>
+  <div class="cooking-manege">
    <%= link_to "編集", edit_cooking_path(@cooking.id), class: "cooking_btn"%>
    <%= link_to "削除", cooking_path(@cooking.id), method: :delete, class: "cooking_btn"%>
- </div>
+  </div>
+ <% end %>
 
   <ul class='cooking-lists'>
    <li class="details-list">
@@ -55,7 +57,7 @@
 
       <tr>
        <th class="details-recipe1">ユーザー名</th>
-       <td class="details-recipe2"><%= link_to "#{@cooking.user.nickname}" %></td>
+       <td class="details-recipe2"><%= link_to "#{@cooking.user.nickname}", user_path(@cooking.user_id)%></td>
       </tr>
 
      </tbody>
@@ -80,10 +82,12 @@
       <% @comments.each do |comment| %>
         <li class="comments_list">
            <%= comment.text%>
-           <%= link_to comment.user.nickname, class: "comment_user"%>
+           <%= link_to comment.user.nickname, user_path(@cooking.user_id), class: "comment_user"%>
         </li>
       <% end %>
     </ul>
   </div>
+  
 
 </div>
+

@@ -20,17 +20,17 @@
       <div class="form-group">
        <div class='form-text-wrap'>
           <label class="form-text">性別</label>
-          <span class="indispensable">必須</span>
-        <%= f.collection_select(:sex_id, Sex.all, :id, :sex, {}, {class:"select-box", id:"cooking-sex-fee"}) %>  
+          <span class="indispensable">必須</span> 
        </div>
+        <%= f.text_area :sex, class:"input-default", id:"sex", placeholder:"例) 女性", maxlength:"40" %>
       </div>
 
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">料理経験</label>
           <span class="indispensable">必須</span>
-         <%= f.collection_select(:cooking_experience_id, CookingExperience.all, :id, :cooking_experience, {}, {class:"select-box", id:"cooking_experience-fee"}) %>  
         </div>
+        <%= f.text_area :cooking_experience, class:"input-default", id:"cooking_experience", placeholder:"例) 料理経験あり", maxlength:"40" %>
       </div>
 
     <div class="form-group">
