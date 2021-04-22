@@ -543,9 +543,36 @@
   align-items: center;
   padding: 10vh 0;
 }
-
 .cooking-video>.title{
   font-size: 5vh;
   line-height: 1.4;
   font-weight: bold;
+}
+.footer{
+  background-color:#f7fef1;
+  padding: 10px 0;
+}
+.contents-img-title{
+  width: 100vw;
+  height: 100vh;
+  background-image: url('Dining scenery.jpeg');
+  display: flex;
+  padding: 5vh 15vw;
+  flex-direction: column-reverse;
+}
+.apple-btn{
+  margin-right: 1vw;
+  height: 9vh;
+}
+.google-btn{
+  height: 9vh;
+}
+.store-btn{
+  padding-top: 50px;
+}
+@media (max-width: 1024px) {
+
+}
+@media (max-width: 599px) {
+
 }
