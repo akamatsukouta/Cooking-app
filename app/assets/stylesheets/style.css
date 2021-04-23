@@ -546,7 +546,7 @@
 .contents-img-title{
   width: 100vw;
   height: 100vh;
-  background-image: url('Dining scenery.jpeg');
+  background-image: url('Dining-scenery.jpeg');
   display: flex;
   padding: 5vh 15vw;
   flex-direction: column-reverse;
@@ -574,7 +574,7 @@
   
 }
 .footer-contents{
-  background-image: url('Dining scenery.jpeg');
+  background-image: url('Dining-scenery.jpeg');
   width: 100vw;
   background-size: cover;
   background-repeat: no-repeat;
