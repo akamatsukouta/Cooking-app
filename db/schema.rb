@@ -35,10 +35,12 @@ ActiveRecord::Schema.define(version: 2021_04_20_075637) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text"
-    t.integer "user_id", null: false
-    t.integer "cooking_id", null: false
+    t.bigint "user_id"
+    t.bigint "cooking_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["cooking_id"], name: "index_comments_on_cooking_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "cookings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -70,4 +72,6 @@ ActiveRecord::Schema.define(version: 2021_04_20_075637) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "comments", "cookings"
+  add_foreign_key "comments", "users"
 end
