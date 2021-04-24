@@ -1,7 +1,10 @@
 class Cooking < ApplicationRecord
   has_many :comments, dependent: :destroy
   belongs_to :user
+  has_many :likes
+  has_many :liked_users, thorough: :likes, source: :user
   has_many_attached :images
+
   
   validates :cooking_name, presence: true
   validates :recipe,       presence: true
