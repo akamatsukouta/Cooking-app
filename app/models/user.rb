@@ -4,10 +4,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
-  has_many :cookings, dependent: :destroy
   has_many :comments
-  has_many :likes, dependent: :destory
-  has_many :like_cookings, through: :likes, sources: :cooking
+  has_many :cookings, dependent: :destroy
+  has_many :likes, dependent: :destroy
+
+  def alredy_liked?(cooking)
+    self.liked.exists?(cooking_id: cooking.id)
+  end
+
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,}+\z/i
  with_options presence: true do
     validates :nickname
