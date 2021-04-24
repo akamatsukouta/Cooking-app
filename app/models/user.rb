@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
 
   def alredy_liked?(cooking)
-    self.liked.exists?(cooking_id: cooking.id)
+    self.likes.exists?(cooking_id: cooking.id)
   end
 
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,}+\z/i
