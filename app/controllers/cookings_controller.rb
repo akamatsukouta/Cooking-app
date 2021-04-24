@@ -13,6 +13,7 @@ class CookingsController < ApplicationController
 
   def create
     @cooking = Cooking.new(cooking_params)
+    @cooking.user_id = current_user.id
     if @cooking.save
       redirect_to root_path   
     else
@@ -24,6 +25,7 @@ class CookingsController < ApplicationController
     @cooking = Cooking.find(params[:id])
     @comment = Comment.new
     @comments = @cooking.comments.includes(:user)
+    @like = Like.new
   end
 
   def destroy

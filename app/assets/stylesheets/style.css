@@ -685,4 +685,8 @@
 #menu-btn-check:checked ~ .menu-content {
   left: 0;
 }
+.like-good{
+  margin: 20px;
+  padding-bottom: 20px;
+}
 
