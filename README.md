@@ -36,8 +36,9 @@ Things you may want to cover:
 
 ### Association
 
-- has_many : cookings
-- has_many : comments
+- has_many :cookings,dependent: :destroy
+- has_many :comments
+- has_many :likes, dependent: :destroy
 
 
 
@@ -51,8 +52,10 @@ Things you may want to cover:
 | user_id  | integer| null: false, foreign_key: true |
 
 ### Association
-- has_many :comments
+- has_many :comments, dependent: :destroy
 - belongs_to :user
+- has_many :likes, dependent: :destroy
+- has_many_attached :images
 
 
 
@@ -70,3 +73,13 @@ Things you may want to cover:
 - belongs_to :cooking
 
 
+## likeテーブル
+
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| cooking  | references|null: false, foreign_key: true |
+| user     | references｜null: false, foreign_key: true |
+
+### Association
+- belongs_to :cooking
+- belongs_to :user

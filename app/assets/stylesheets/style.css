@@ -9,13 +9,17 @@
 .upper_side {
   width: 1030px;
   margin: 0 auto;
- 
+  
 }
+
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
  
+}
+.nav-right{
+  margin-top: 35px;
 }
 .logo {
   width: 150px;
