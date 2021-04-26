@@ -26,7 +26,7 @@
         <%= "#{@user.nickname}さんのレシピ投稿" %>
       </h1>
       <div class="user-recipe">
-         <%= render partial: 'cookings/cooking', collection: @cookings %>
+         <%= render partial: 'cookings/cooking',local:{ cooking: @cookings} %>
       </div>
     </div>
   </div>
