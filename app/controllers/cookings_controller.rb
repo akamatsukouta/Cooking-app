@@ -4,7 +4,6 @@ class CookingsController < ApplicationController
 
 
   def index
-    @ranks = Cooking.find(Like.group(:cooking_id).order('count(cooking_id) DESC').limit(3).pluck(:cooking_id))
     @cookings = Cooking.order("created_at DESC")
   end
 
@@ -47,6 +46,11 @@ class CookingsController < ApplicationController
   def search
     @cookings = Cooking.search(params[:keyword])
   end
+
+  def ranking
+    @ranks = Cooking.find(Like.group(:cooking_id).order('count(cooking_id) DESC').limit(3).pluck(:cooking_id))
+  end
+
   
 
   private
