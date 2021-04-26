@@ -9,13 +9,17 @@
 .upper_side {
   width: 1030px;
   margin: 0 auto;
- 
+  
 }
+
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
  
+}
+.nav-right{
+  margin-top: 35px;
 }
 .logo {
   width: 150px;
@@ -575,7 +579,7 @@
 }
 .footer-contents{
   background-image: url('Dining-scenery.jpeg');
-  width: 100vw;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -689,4 +693,16 @@
   margin: 20px;
   padding-bottom: 20px;
 }
-
+.user-recipe{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-heading {
+  font-size: 30px;
+  margin-bottom: 28px;
+}
+.user_wrapper{
+  min-height: calc(100vh - 161px);
+}
