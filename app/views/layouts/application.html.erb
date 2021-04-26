@@ -24,7 +24,11 @@
         <div class="menu-content">
             <ul>
                 <li>
-                  <a href="#">メニューリンク1</a>
+                  <% if user_signed_in? %>
+                    <%= link_to 'マイページ' , user_path(current_user.id) %>
+                  <% else %>
+                    <%= link_to '新規登録はこちら', new_user_registration_path %>
+                  <% end %>
                 </li>
                 <li>
                   <a href="#">メニューリンク2</a>
