@@ -63,5 +63,14 @@
     <%= render partial: "cooking", collection: @cookings %>
   </div>
 
+  <div class='cooking-card-contents'>
+   <h2 class='title'>レシピランキング</h2>
+    <% @ranks.each.with_index(1) do |cooking, i| %>
+     第<%= i %>位
+     <%= render partial: "cooking", collection: @cookings %>
+    <% end %>
+  </div>
+
+
  </body>
 </html>
