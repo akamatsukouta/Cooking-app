@@ -4,6 +4,7 @@ class CookingsController < ApplicationController
 
 
   def index
+    @ranks = Cooking.find(Like.group(:cooking_id).order('count(cooking_id) DESC').limit(3).pluck(:cooking_id))
     @cookings = Cooking.order("created_at DESC")
   end
 
@@ -47,6 +48,7 @@ class CookingsController < ApplicationController
     @cookings = Cooking.search(params[:keyword])
   end
   
+
   private
   def cooking_params
     params.require(:cooking).permit(:cooking_name, :material, :recipe, :point1, :point2, :point3, :production_time, images:[]).merge(user_id: current_user.id)
