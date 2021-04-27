@@ -52,13 +52,11 @@ class CookingsController < ApplicationController
     @cookings = Cooking.order("created_at DESC")
   end
 
-  
-
   private
   def cooking_params
     params.require(:cooking).permit(:cooking_name, :material, :recipe, :point1, :point2, :point3, :production_time, images:[]).merge(user_id: current_user.id)
   end
-
+  
   def move_to_index
     @cooking = Cooking.find(params[:id])
     unless current_user.id == @cooking.user_id
