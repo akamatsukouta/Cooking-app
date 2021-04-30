@@ -48,7 +48,7 @@ class CookingsController < ApplicationController
   end
 
   def ranking
-    @ranks = Cooking.find(Like.group(:cooking_id).order('count(cooking_id) DESC').limit(3).pluck(:cooking_id))
+    @all_ranks = Cooking.find(Like.group(:cooking_id).order('count(cooking_id) DESC').limit(3).pluck(:cooking_id))
     @cookings = Cooking.order("created_at DESC")
   end
 
