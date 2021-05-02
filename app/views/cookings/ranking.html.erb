@@ -3,6 +3,8 @@
   <h2 class='title'>レシピランキング</h2>
    <% @all_ranks.each.with_index(1) do |cooking, i| %>
       第<%= i %>位
-     <%= render partial: "cooking", ranking: @cookings%>
-  <% end %>
+     <ul class='cooking-lists'>
+     <%= render partial: "rank", locals:{ cooking: cooking}%>
+     </ul>
+   <% end %>
 </div>
