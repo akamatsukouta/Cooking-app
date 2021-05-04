@@ -35,6 +35,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker', '1.9.1'
   gem 'pry-rails' 
+  gem 'sqlite3', '1.3.13'
 end
 
 group :development do
@@ -54,6 +55,10 @@ group :test do
   gem 'webdrivers'
 end
 
+group :production do
+  gem 'pg'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
@@ -61,4 +66,4 @@ gem 'active_hash'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'mini_racer'
-gem 'sqlite3', '~> 1.3.6'
+
